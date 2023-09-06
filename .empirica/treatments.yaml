@@ -1,0 +1,30 @@
+factors:
+    - name: playerCount
+      desc: playerCount determines the number of Players are in a Game.
+      values:
+        - value: 1
+        - value: 2
+        - value: 3
+        - value: 5
+        - value: 8
+        - value: 13
+    - name: idMap
+      desc: mapping of unique ids to character index. Stringified
+      values:
+        - value: '''{"abc":1}'''
+    - name: scoreSheet
+      desc: |
+        stringified json of score spreadsheet
+      values:
+        - value: '''{"mix": {"30 :: 70":[23,0,0,21,0,0],"50 :: 50":[9,10,5,10,13,20],"70 :: 30":[0,20,10,0,6,10]},"residential": {"0.06":[11,0,0,0,9,0],"0.09":[8,5,5,2,6,15],"0.12":[4,20,10,4,3,15],"0.15":[0,25,15,10,0,0]},"green": {"14 acres":[17,0,0,30,0,0],"16 acres":[11,10,4,20,8,20],"18 acres":[8,15,10,9,16,30],"20 acres":[0,35,15,0,24,0]},"height": {"400 foot tower":[0,15,25,0,38,0],"500 foot tower":[0,10,15,5,20,20],"600 foot tower":[10,5,10,10,10,15],"700 foot tower":[20,0,5,15,0,5],"800 foot tower":[30,0,0,25,0,5]},"venues": {"0 venues":[0,5,35,0,4,0],"1 venue":[5,5,20,5,12,15],"2 venues":[11,5,20,6,16,15],"3 venues":[14,0,0,9,8,15],"4 venues":[19,0,0,14,0,0]}}'''
+treatments:
+    - name: Two Players
+      desc: Two-player Game
+      factors:
+        playerCount: 2
+    - name: Solo
+      desc: Single-player Game
+      factors:
+        idMap: '''{"abc":1}'''
+        playerCount: 1
+        scoreSheet: '''{"mix": {"30 :: 70":[23,0,0,21,0,0],"50 :: 50":[9,10,5,10,13,20],"70 :: 30":[0,20,10,0,6,10]},"residential": {"0.06":[11,0,0,0,9,0],"0.09":[8,5,5,2,6,15],"0.12":[4,20,10,4,3,15],"0.15":[0,25,15,10,0,0]},"green": {"14 acres":[17,0,0,30,0,0],"16 acres":[11,10,4,20,8,20],"18 acres":[8,15,10,9,16,30],"20 acres":[0,35,15,0,24,0]},"height": {"400 foot tower":[0,15,25,0,38,0],"500 foot tower":[0,10,15,5,20,20],"600 foot tower":[10,5,10,10,10,15],"700 foot tower":[20,0,5,15,0,5],"800 foot tower":[30,0,0,25,0,5]},"venues": {"0 venues":[0,5,35,0,4,0],"1 venue":[5,5,20,5,12,15],"2 venues":[11,5,20,6,16,15],"3 venues":[14,0,0,9,8,15],"4 venues":[19,0,0,14,0,0]}}'''
